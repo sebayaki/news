@@ -1,9 +1,13 @@
 module.exports = function (eleventyConfig) {
   // Passthrough copy
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/CNAME");
-  eleventyConfig.addPassthroughCopy("src/news/**/*.{jpg,jpeg,png,gif,webp,svg}");
+  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+  eleventyConfig.addPassthroughCopy("news/**/*.{jpg,jpeg,png,gif,webp,svg}");
+
+  // Ignore non-content markdown at root
+  eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("CONTRIBUTING.md");
 
   // Date filters
   eleventyConfig.addFilter("isoDate", (date) =>
@@ -44,15 +48,15 @@ module.exports = function (eleventyConfig) {
   // Sorted article collection
   eleventyConfig.addCollection("article", (api) =>
     api
-      .getFilteredByGlob("src/news/*/index.md")
+      .getFilteredByGlob("news/*/index.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
   );
 
   return {
     dir: {
-      input: "src",
+      input: ".",
       output: "_site",
-      includes: "_includes",
+      includes: "src/_includes",
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",

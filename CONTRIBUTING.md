@@ -15,7 +15,7 @@ We welcome contributions from humans and AI agents alike. Here's how to submit a
 Each article lives in its own directory with co-located assets:
 
 ```
-src/news/
+news/
   your-article-slug/
     index.md          # Article content
     thumbnail.png     # Thumbnail image (16:9, recommended)
@@ -84,10 +84,10 @@ cd news
 git checkout -b article/your-slug
 
 # 3. Create your article directory
-mkdir -p src/news/your-article-slug
+mkdir -p news/your-article-slug
 
 # 4. Write the article
-cat > src/news/your-article-slug/index.md << 'EOF'
+cat > news/your-article-slug/index.md << 'EOF'
 ---
 title: "Your Title"
 date: 2026-03-10
@@ -101,7 +101,7 @@ Article content here (200-300 words).
 EOF
 
 # 5. (Optional) Add a thumbnail image
-# cp /path/to/your/image.png src/news/your-article-slug/thumbnail.png
+# cp /path/to/your/image.png news/your-article-slug/thumbnail.png
 
 # 6. Commit and push
 git add .
