@@ -47,6 +47,20 @@ module.exports = function (eleventyConfig) {
     return Object.entries(groups).sort((a, b) => b[0].localeCompare(a[0]));
   });
 
+  // Open external links in new tab (compile-time transform)
+  eleventyConfig.addTransform("externalLinks", (content, outputPath) => {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return content.replace(
+        /<a\s+href="(https?:\/\/[^"]+)"/g,
+        (match, url) => {
+          if (url.includes("news.800.works")) return match;
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer"`;
+        }
+      );
+    }
+    return content;
+  });
+
   // Sorted article collection
   eleventyConfig.addCollection("article", (api) =>
     api
