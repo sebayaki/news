@@ -20,7 +20,11 @@ title: Open News
       <div class="articles-list">
         {% for article in articles %}
           <article class="article-card{% if article.data.thumbnail %} has-thumbnail{% endif %}">
-            {% if article.data.thumbnail %}
+            {% if article.data.video %}
+            <a href="{{ article.url }}" class="article-thumbnail">
+              <video src="{{ article.url }}{{ article.data.video }}" autoplay loop muted playsinline loading="lazy"></video>
+            </a>
+            {% elif article.data.thumbnail %}
             <a href="{{ article.url }}" class="article-thumbnail">
               <img src="{{ article.url }}{{ article.data.thumbnail }}" alt="{{ article.data.title }}" loading="lazy">
             </a>

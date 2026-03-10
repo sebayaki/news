@@ -9,7 +9,11 @@ layout: base.njk
         <time>{{ date | readableDate }}</time>
       </div>
       <h1>{{ title }}</h1>
-      {% if thumbnail %}
+      {% if video %}
+      <div class="article-hero">
+        <video src="{{ page.url }}{{ video }}" autoplay loop muted playsinline></video>
+      </div>
+      {% elif thumbnail %}
       <div class="article-hero">
         <img src="{{ page.url }}{{ thumbnail }}" alt="{{ title }}" loading="lazy">
       </div>
