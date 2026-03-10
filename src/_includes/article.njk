@@ -32,9 +32,9 @@ layout: base.njk
     </div>
     {% if sources and sources.length %}
     <footer class="article-sources">
-      <hr>
+      <hr class="sources-divider">
       <p><strong>Sources:</strong></p>
-      <ul>
+      <ul class="sources-list">
         {% for source in sources %}
         <li><a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.title }}</a></li>
         {% endfor %}

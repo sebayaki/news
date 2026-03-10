@@ -30,4 +30,3 @@ The numbers tell a story of DeFi growing up. A year ago, tokenized commodity pro
 
 HYPE, the platform's native token, has jumped 35% year-to-date to around $34, making it one of the best-performing large-cap tokens of 2026 while most of crypto remains in the red.
 
-**Sources:** [CoinDesk](https://www.coindesk.com/markets/2026/03/09/oil-shorts-on-hyperliquid-get-wiped-out-as-crude-surges-30-on-iran-escalation-triggering-usd40-million-in-liquidations) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-09/oil-trades-are-booming-on-24-7-crypto-exchange-hyperliquid) · [Benzinga](https://www.benzinga.com/crypto/cryptocurrency/26/03/51148880/hyperliquid-token-jumps-35-to-top-billion-dollar-crypto-charts-in-2026-oil-trading-volume-skyrockets-on-platform)

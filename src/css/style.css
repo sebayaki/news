@@ -469,6 +469,21 @@ a { color: inherit; }
   color: var(--accent);
 }
 
+/* --- Article Sources --- */
+.article-sources .sources-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 1em;
+}
+.article-sources .sources-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0;
+}
+.article-sources .sources-list li {
+  padding-left: 0;
+}
+
 /* --- Responsive --- */
 @media (max-width: 640px) {
   .site-header { padding: 4rem 1.25rem 2rem; }

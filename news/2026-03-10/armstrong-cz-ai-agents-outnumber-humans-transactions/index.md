@@ -34,4 +34,3 @@ He also flagged a problem: most cryptocurrencies, including Bitcoin, lack suffic
 
 Both executives are positioning crypto wallets as the default financial identity layer for autonomous software. As AI agents increasingly handle routine tasks - from payments to trading to resource allocation - the infrastructure they transact on becomes a critical chokepoint. The race to build "agent-native" financial rails is accelerating.
 
-**Sources:** [Brian Armstrong on X](https://x.com/brian_armstrong/status/2031021867973194172) · [CZ on X](https://x.com/cz_binance/status/2030984617109664061) · [CryptoTimes](https://www.cryptotimes.io/2026/03/10/coinbase-ceo-ai-agents-may-soon-transact-more-than-humans/) · [CoinEdition](https://coinedition.com/cz-says-ai-agents-could-dominate-payments-using-crypto/)

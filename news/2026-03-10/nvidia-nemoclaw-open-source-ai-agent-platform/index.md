@@ -27,7 +27,3 @@ The announcement sent AI-linked crypto tokens higher. The AI token category clim
 ## Why It Matters
 
 The move signals Nvidia's pivot beyond its proprietary CUDA ecosystem toward open-source software as AI labs increasingly build custom chips. Enterprise adoption of autonomous AI agents has been a contentious topic - several tech companies have restricted agent usage over security concerns. NemoClaw's focus on enterprise-grade security could help bridge that gap.
-
-**Sources:**
-- [WIRED](https://www.wired.com/story/nvidia-planning-ai-agent-platform-launch-open-source/)
-- [CoinDesk](https://www.coindesk.com/markets/2026/03/10/ai-tokens-rally-after-nvidia-open-source-agent-plan-beating-coindesk-20)

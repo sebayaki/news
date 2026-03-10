@@ -30,4 +30,3 @@ The release addresses over a dozen bugs: Telegram DM deduplication prevents dupl
 
 The update also hardens Podman/SELinux support with auto-detection of enforcing mode and automatic `:Z` relabeling for bind mounts on Fedora and RHEL hosts.
 
-**Sources:** [GitHub Release](https://github.com/openclaw/openclaw/releases/tag/v2026.3.8) · [Announcement](https://x.com/openclaw/status/2030924089024471045)

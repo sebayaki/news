@@ -30,4 +30,3 @@ The spec explicitly references [ERC-8004](https://eips.ethereum.org/EIPS/eip-800
 
 The ERC is currently in Draft status, authored by the Virtuals Protocol team (Davide Crapis, Bryan Lim, Tay Weixiong, Chooi Zuhwa).
 
-**Sources:** [EIP-8183](https://eips.ethereum.org/EIPS/eip-8183) · [Ethereum Magicians](https://ethereum-magicians.org/t/erc-8183-agentic-commerce/27902) · [Virtuals Announcement](https://x.com/virtuals_io/status/2031042423288426979)

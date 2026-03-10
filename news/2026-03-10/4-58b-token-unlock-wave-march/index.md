@@ -36,4 +36,3 @@ Beyond WBT, several familiar names see supply increases this week:
 
 Cliff unlocks tend to have sharper immediate effects since large volumes hit at once, while linear releases are spread over time and typically absorbed more quietly. With BTC at $67,267 and ETH near $1,980, broader sentiment is cautiously recovering from last week's geopolitical volatility. How recipients handle the WBT event - hold versus sell - will be the key variable to watch.
 
-**Sources:** [Coin Edition](https://coinedition.com/crypto-supply-surge-ahead-as-4-58b-in-tokens-unlock-this-week/) · [Token Unlocks](https://insights.unlocks.app/weekly-token-unlocks-digest-mar-9-15-2026-4-39b-wbt-unlock-ahead/) · [Wu Blockchain](https://x.com/WuBlockchain/status/2030808847884132848)

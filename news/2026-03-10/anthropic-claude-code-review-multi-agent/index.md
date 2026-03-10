@@ -30,4 +30,3 @@ In one internal case, a routine one-line change that would have broken productio
 
 Code Review is billed on token usage, averaging $15-25 per review depending on PR size. Admins can set monthly organization caps, enable reviews per repository, and track costs via an analytics dashboard. The existing Claude Code GitHub Action remains free and open source as a lighter alternative.
 
-**Sources:** [Anthropic Blog](https://claude.com/blog/code-review) · [Announcement](https://x.com/claudeai/status/2031088171262554195)

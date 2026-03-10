@@ -27,5 +27,3 @@ Standard cardholders earn up to 1% cashback in mUSD on purchases. A premium Meta
 ## Why It Matters
 
 Self-custodial spending has been a missing piece in crypto's push toward everyday usability. Most existing solutions require users to give up control of their funds to a third party before spending. MetaMask's approach - keeping funds in-wallet until the transaction - is a meaningful step toward "not your keys, not your coins" actually working at the point of sale.
-
-**Source:** [MetaMask Official Announcement](https://metamask.io/news/introducing-metamask-card-upgrade-your-crypto-spending)
