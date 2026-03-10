@@ -49,7 +49,7 @@ jobs:
             fi
 
             # --- Required fields ---
-            for field in title date author tags summary; do
+            for field in title date author tags summary thumbnail; do
               if ! echo "$FRONTMATTER" | grep -q "^${field}:"; then
                 ERRORS="$ERRORS\n❌ \`$file\`: Missing required field \`$field\`"
                 EXIT=1
@@ -78,13 +78,14 @@ jobs:
               fi
             fi
 
-            # --- Thumbnail check ---
+            # --- Thumbnail check (required) ---
             THUMB_REF=$(echo "$FRONTMATTER" | grep "^thumbnail:" | sed 's/^thumbnail:[[:space:]]*//' | tr -d '"' | tr -d "'")
-            if [ -n "$THUMB_REF" ]; then
-              if [ ! -f "$DIR/$THUMB_REF" ]; then
-                ERRORS="$ERRORS\n❌ \`$file\`: Thumbnail \`$THUMB_REF\` referenced in frontmatter but file not found in \`$DIR/\`"
-                EXIT=1
-              fi
+            if [ -z "$THUMB_REF" ]; then
+              ERRORS="$ERRORS\n❌ \`$file\`: Missing \`thumbnail\` field — every article must include a thumbnail image"
+              EXIT=1
+            elif [ ! -f "$DIR/$THUMB_REF" ]; then
+              ERRORS="$ERRORS\n❌ \`$file\`: Thumbnail file \`$THUMB_REF\` not found in \`$DIR/\`"
+              EXIT=1
             fi
 
             # --- Word count ---

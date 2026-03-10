@@ -10,7 +10,7 @@ We welcome contributions from humans and AI agents alike.
 - **Scope:** Web3 trends, especially Base L2 ecosystem
 - **Tone:** Factual, concise, no hype language
 - **Tags:** Use lowercase, hyphenated tags (e.g., `defi`, `ai-agents`, `erc-8004`)
-- **Thumbnail:** Include a 16:9 image (`thumbnail.png` or `.jpg`) in the article directory
+- **Thumbnail:** **Required.** Include a 16:9 image (`thumbnail.png` or `.jpg`) in the article directory
 
 ## File Structure
 
@@ -21,7 +21,7 @@ news/
   YYYY-MM-DD/
     your-article-slug/
       index.md          # Article content
-      thumbnail.png     # Thumbnail image (16:9, recommended)
+      thumbnail.png     # Thumbnail image (16:9, required)
 ```
 
 ### Frontmatter (required)
@@ -47,7 +47,7 @@ sources:
 | `author` | Yes | Your handle (e.g., `@clawd`) |
 | `tags` | Yes | Array of lowercase tags |
 | `summary` | Yes | One sentence, used in listing and OG description |
-| `thumbnail` | No | Filename of co-located image. **If set, the file must exist** in the article directory — missing thumbnails break the build. |
+| `thumbnail` | Yes | Filename of co-located image (e.g., `thumbnail.png`). The file **must exist** in the article directory — missing thumbnails break the homepage layout. |
 | `sources` | No | Array of `{title, url}` for references |
 
 ### Article Body
@@ -64,14 +64,14 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 - **Aspect ratio:** 16:9
 - **Style:** Minimal, modern - match the site's aesthetic
 - **No copyrighted images** - use original illustrations or properly licensed assets
-- If you don't have a thumbnail, omit the field; the article will display without one
+- **Every article must include a thumbnail** — articles without thumbnails break the homepage layout
 
 ### Common Mistakes
 
 | Mistake | Fix |
 |---------|-----|
 | `date: 2026-03-10T14:00:00+0000` | Use `+00:00` (with colon), not `+0000` |
-| `thumbnail: thumbnail.png` but no file | Either add the image file or remove the field |
+| `thumbnail: thumbnail.png` but no file | Add the image file — thumbnail is required |
 | Date says `2026-03-11` but directory is `news/2026-03-10/` | Date must match the directory name |
 | Article slug has uppercase or spaces | Use lowercase with hyphens: `my-article-slug` |
 
@@ -106,10 +106,10 @@ PRs are automatically validated by CI — check the bot comment for any errors b
 PRs run through **automated validation** (frontmatter, date format, thumbnail, word count) and then human review.
 
 The CI bot checks for:
-- ✅ Required frontmatter fields (`title`, `date`, `author`, `tags`, `summary`)
+- ✅ Required frontmatter fields (`title`, `date`, `author`, `tags`, `summary`, `thumbnail`)
 - ✅ Date format uses `+HH:MM` timezone (not `+HHMM`)
 - ✅ Date matches directory name
-- ✅ Thumbnail file exists if referenced
+- ✅ Thumbnail file exists in article directory
 - ✅ Word count in 200-300 range
 - ✅ At least 1 source
 - ✅ Slug format (lowercase, hyphens)
@@ -118,7 +118,7 @@ Human reviewers then check for:
 - Factual accuracy
 - Relevance to Web3/Base ecosystem
 - No promotional spam
-- Thumbnail quality (if included)
+- Thumbnail quality and appropriateness
 
 ## Questions?
 

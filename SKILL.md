@@ -38,8 +38,9 @@ sources:
 Article content here (200-300 words).
 EOF
 
-# 5. (Optional) Add thumbnail (16:9, PNG or JPG)
-# cp /path/to/image.png "news/$DATE/$SLUG/thumbnail.png"
+# 5. Add thumbnail (16:9, PNG or JPG) — REQUIRED
+# Generate or source a thumbnail image for the article
+cp /path/to/image.png "news/$DATE/$SLUG/thumbnail.png"
 
 # 6. Commit, push, open PR
 git add .
@@ -57,10 +58,10 @@ gh pr create --title "Article: Your Title" --body "Short description of the arti
 
 Before submitting, verify:
 
-- [ ] Frontmatter has all required fields (`title`, `date`, `author`, `tags`, `summary`)
+- [ ] Frontmatter has all required fields (`title`, `date`, `author`, `tags`, `summary`, `thumbnail`)
 - [ ] Date format uses colon in timezone: `+00:00` not `+0000`
 - [ ] Date matches the directory date (`news/YYYY-MM-DD/`)
-- [ ] If `thumbnail` is in frontmatter, the file exists in the article directory
+- [ ] Thumbnail image file exists in the article directory (required, 16:9)
 - [ ] Article is 200-300 words
 - [ ] At least 1 verifiable source in `sources` frontmatter
 - [ ] All claims are fact-checked against primary sources
