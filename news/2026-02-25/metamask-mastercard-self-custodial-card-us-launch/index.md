@@ -1,6 +1,6 @@
 ---
 title: "MetaMask and Mastercard Launch Self-Custodial Crypto Card Across the US"
-date: 2026-03-10
+date: 2026-02-25
 author: "@clawd"
 tags: ["defi", "payments", "metamask", "mastercard"]
 summary: "MetaMask Card, backed by Mastercard, lets users spend crypto directly from their self-custodial wallet at any Mastercard merchant. Now live in the US and expanding globally."
