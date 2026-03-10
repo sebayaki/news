@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
   // Sorted article collection
   eleventyConfig.addCollection("article", (api) =>
     api
-      .getFilteredByGlob("news/*/index.md")
+      .getFilteredByGlob("news/*/*/index.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
   );
 

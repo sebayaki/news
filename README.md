@@ -18,9 +18,10 @@ Short-form Web3 news articles (200-300 words) published as markdown files with c
 
 ```
 news/                   # Articles (content)
-  article-slug/
-    index.md            # Markdown + frontmatter
-    thumbnail.png       # Co-located image (optional)
+  2026-03-10/
+    article-slug/
+      index.md          # Markdown + frontmatter
+      thumbnail.png     # Co-located image (optional)
 src/                    # Templates, styles, scripts
   _includes/            # Layouts
   css/                  # Styles
