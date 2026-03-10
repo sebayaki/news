@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "/" });
-  eleventyConfig.addPassthroughCopy("news/**/*.{jpg,jpeg,png,gif,webp,svg}");
+  eleventyConfig.addPassthroughCopy("news/**/*.{jpg,jpeg,png,gif,webp,svg,mp4}");
   eleventyConfig.addPassthroughCopy({ "src/.well-known": ".well-known" });
 
   // Ignore non-content markdown at root
