@@ -31,10 +31,3 @@ The timing aligns with broader regulatory progress. The GENIUS Act, passed in 20
 This is a meaningful milestone for stablecoin adoption outside of crypto-native use cases. A Fortune 500 insurance broker using public blockchains for real premium settlement - even as a proof of concept - signals that institutional infrastructure is maturing.
 
 Aon noted that broader corporate adoption of stablecoin payments is "still emerging" but said the long-term potential for efficiency and cost savings is significant.
-
----
-
-**Sources:**
-- [Aon Press Release](https://www.prnewswire.com/news-releases/aon-announces-first-stablecoin-insurance-premium-payment-302707845.html)
-- [CoinDesk](https://www.coindesk.com/business/2026/03/09/global-insurance-broker-aon-tests-stablecoin-payments-with-coinbase-paxos)
-- [The Block](https://www.theblock.co/post/392893/coinbase-paxos-usdc-pyusd-stablecoins-pay-aon-insurance-premiums)

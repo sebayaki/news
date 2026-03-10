@@ -30,5 +30,16 @@ layout: base.njk
     <div class="article-body">
       {{ content | safe }}
     </div>
+    {% if sources and sources.length %}
+    <footer class="article-sources">
+      <hr>
+      <p><strong>Sources:</strong></p>
+      <ul>
+        {% for source in sources %}
+        <li><a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </footer>
+    {% endif %}
   </article>
 </main>
