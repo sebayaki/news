@@ -1,0 +1,169 @@
+name: Validate Article PR
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "news/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed article files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only --diff-filter=ACM origin/main...HEAD -- 'news/**/*.md' | tr '\n' ' ')
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Changed article files: $FILES"
+
+      - name: Validate articles
+        if: steps.changed.outputs.files != ''
+        run: |
+          ERRORS=""
+          WARNINGS=""
+          EXIT=0
+
+          for file in ${{ steps.changed.outputs.files }}; do
+            echo "::group::Validating $file"
+            DIR=$(dirname "$file")
+            SLUG=$(basename "$DIR")
+            DATE_DIR=$(basename "$(dirname "$DIR")")
+
+            # Extract frontmatter (between --- delimiters)
+            FRONTMATTER=$(sed -n '/^---$/,/^---$/p' "$file" | sed '1d;$d')
+
+            if [ -z "$FRONTMATTER" ]; then
+              ERRORS="$ERRORS\n❌ \`$file\`: Missing YAML frontmatter (must start and end with \`---\`)"
+              EXIT=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            # --- Required fields ---
+            for field in title date author tags summary; do
+              if ! echo "$FRONTMATTER" | grep -q "^${field}:"; then
+                ERRORS="$ERRORS\n❌ \`$file\`: Missing required field \`$field\`"
+                EXIT=1
+              fi
+            done
+
+            # --- Date format validation ---
+            DATE_VAL=$(echo "$FRONTMATTER" | grep "^date:" | sed 's/^date:[[:space:]]*//' | tr -d '"' | tr -d "'")
+            if [ -n "$DATE_VAL" ]; then
+              # Check for +0000 style (missing colon) — must be +00:00
+              if echo "$DATE_VAL" | grep -qE '[+-][0-9]{4}$'; then
+                ERRORS="$ERRORS\n❌ \`$file\`: Invalid timezone format in date \`$DATE_VAL\`. Use \`+HH:MM\` (e.g. \`+00:00\`, \`+09:00\`), not \`+HHMM\`"
+                EXIT=1
+              fi
+
+              # Check date matches directory date
+              FILE_DATE=$(echo "$DATE_VAL" | grep -oE '^[0-9]{4}-[0-9]{2}-[0-9]{2}')
+              if [ -n "$FILE_DATE" ] && [ "$FILE_DATE" != "$DATE_DIR" ]; then
+                ERRORS="$ERRORS\n❌ \`$file\`: Date \`$FILE_DATE\` doesn't match directory \`$DATE_DIR\`"
+                EXIT=1
+              fi
+
+              # Validate ISO 8601 format
+              if ! echo "$DATE_VAL" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-9]{2})?$'; then
+                WARNINGS="$WARNINGS\n⚠️ \`$file\`: Date format \`$DATE_VAL\` — recommended: \`YYYY-MM-DDTHH:MM:SS+HH:MM\`"
+              fi
+            fi
+
+            # --- Thumbnail check ---
+            THUMB_REF=$(echo "$FRONTMATTER" | grep "^thumbnail:" | sed 's/^thumbnail:[[:space:]]*//' | tr -d '"' | tr -d "'")
+            if [ -n "$THUMB_REF" ]; then
+              if [ ! -f "$DIR/$THUMB_REF" ]; then
+                ERRORS="$ERRORS\n❌ \`$file\`: Thumbnail \`$THUMB_REF\` referenced in frontmatter but file not found in \`$DIR/\`"
+                EXIT=1
+              fi
+            fi
+
+            # --- Word count ---
+            BODY=$(sed '1,/^---$/d' "$file" | sed '1,/^---$/d')
+            WORD_COUNT=$(echo "$BODY" | wc -w | tr -d ' ')
+            if [ "$WORD_COUNT" -lt 150 ]; then
+              WARNINGS="$WARNINGS\n⚠️ \`$file\`: Article body is $WORD_COUNT words (recommended: 200-300)"
+            elif [ "$WORD_COUNT" -gt 400 ]; then
+              WARNINGS="$WARNINGS\n⚠️ \`$file\`: Article body is $WORD_COUNT words (recommended: 200-300)"
+            fi
+
+            # --- Sources check ---
+            if ! echo "$FRONTMATTER" | grep -q "^sources:"; then
+              WARNINGS="$WARNINGS\n⚠️ \`$file\`: No \`sources\` in frontmatter — at least 1 verifiable source recommended"
+            fi
+
+            # --- Slug format ---
+            if echo "$SLUG" | grep -qE '[A-Z]|[^a-z0-9-]'; then
+              WARNINGS="$WARNINGS\n⚠️ \`$file\`: Slug \`$SLUG\` should be lowercase with hyphens only"
+            fi
+
+            echo "::endgroup::"
+          done
+
+          # --- Build summary ---
+          SUMMARY=""
+          if [ -n "$ERRORS" ]; then
+            SUMMARY="## ❌ Validation Failed\n\n### Errors (must fix)\n$ERRORS"
+          fi
+          if [ -n "$WARNINGS" ]; then
+            if [ -n "$SUMMARY" ]; then
+              SUMMARY="$SUMMARY\n\n### Warnings\n$WARNINGS"
+            else
+              SUMMARY="## ✅ Validation Passed\n\n### Warnings\n$WARNINGS"
+            fi
+          fi
+          if [ -z "$ERRORS" ] && [ -z "$WARNINGS" ]; then
+            SUMMARY="## ✅ Validation Passed\n\nAll checks passed. No issues found."
+          fi
+
+          echo -e "$SUMMARY"
+          printf '%s\n' "$SUMMARY" > /tmp/validation-summary.md
+          exit $EXIT
+
+      - name: Comment on PR
+        if: always() && steps.changed.outputs.files != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body;
+            try {
+              body = fs.readFileSync('/tmp/validation-summary.md', 'utf8');
+            } catch {
+              body = '## ✅ No article files to validate';
+            }
+
+            // Find existing bot comment to update
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const botComment = comments.data.find(c =>
+              c.user.type === 'Bot' && c.body.includes('Validation')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }

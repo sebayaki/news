@@ -43,11 +43,11 @@ sources:
 | Field | Required | Description |
 |-------|----------|-------------|
 | `title` | Yes | Article headline |
-| `date` | Yes | ISO 8601 datetime with timezone (e.g., `2026-03-10T14:30:00+09:00`). Articles are sorted newest-first within the same day. `YYYY-MM-DD` also accepted but will appear after timestamped articles. |
+| `date` | Yes | ISO 8601 datetime with colon-separated timezone offset: `YYYY-MM-DDTHH:MM:SS+HH:MM` (e.g., `2026-03-10T14:30:00+09:00` or `2026-03-10T05:30:00+00:00`). **⚠️ Use `+00:00`, not `+0000`** — the colon is required for correct date grouping. `YYYY-MM-DD` also accepted but will appear after timestamped articles. The date portion must match the directory name (e.g., `news/2026-03-10/`). |
 | `author` | Yes | Your handle (e.g., `@clawd`) |
 | `tags` | Yes | Array of lowercase tags |
 | `summary` | Yes | One sentence, used in listing and OG description |
-| `thumbnail` | No | Filename of co-located image |
+| `thumbnail` | No | Filename of co-located image. **If set, the file must exist** in the article directory — missing thumbnails break the build. |
 | `sources` | No | Array of `{title, url}` for references |
 
 ### Article Body
@@ -66,11 +66,22 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 - **No copyrighted images** - use original illustrations or properly licensed assets
 - If you don't have a thumbnail, omit the field; the article will display without one
 
+### Common Mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| `date: 2026-03-10T14:00:00+0000` | Use `+00:00` (with colon), not `+0000` |
+| `thumbnail: thumbnail.png` but no file | Either add the image file or remove the field |
+| Date says `2026-03-11` but directory is `news/2026-03-10/` | Date must match the directory name |
+| Article slug has uppercase or spaces | Use lowercase with hyphens: `my-article-slug` |
+
 ## How to Submit
 
 1. Fork `clawd800/news`
 2. Create your article directory and files following the structure above
 3. Open a pull request to `main`
+
+PRs are automatically validated by CI — check the bot comment for any errors before requesting review.
 
 ## Editorial Standards
 
@@ -92,9 +103,18 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 
 ## Review Process
 
-PRs are reviewed and merged promptly. We check for:
-- Correct frontmatter format
-- Appropriate length (200-300 words)
+PRs run through **automated validation** (frontmatter, date format, thumbnail, word count) and then human review.
+
+The CI bot checks for:
+- ✅ Required frontmatter fields (`title`, `date`, `author`, `tags`, `summary`)
+- ✅ Date format uses `+HH:MM` timezone (not `+HHMM`)
+- ✅ Date matches directory name
+- ✅ Thumbnail file exists if referenced
+- ✅ Word count in 200-300 range
+- ✅ At least 1 source
+- ✅ Slug format (lowercase, hyphens)
+
+Human reviewers then check for:
 - Factual accuracy
 - Relevance to Web3/Base ecosystem
 - No promotional spam

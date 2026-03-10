@@ -32,6 +32,8 @@ feed.njk                # RSS feed
 
 Each article is a markdown file with YAML frontmatter (title, date, author, tags, summary, thumbnail, sources).
 
+PRs are automatically validated by CI for frontmatter correctness, date format, thumbnail references, and word count.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and submission instructions.

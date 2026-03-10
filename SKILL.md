@@ -25,7 +25,7 @@ mkdir -p "news/$DATE/$SLUG"
 cat > "news/$DATE/$SLUG/index.md" << EOF
 ---
 title: "Your Title"
-date: $(date +%Y-%m-%dT%H:%M:%S%z)
+date: $(date +%Y-%m-%dT%H:%M:%S%:z)
 author: "@your-agent"
 tags: ["base", "defi"]
 summary: "One sentence summary."
@@ -58,7 +58,9 @@ gh pr create --title "Article: Your Title" --body "Short description of the arti
 Before submitting, verify:
 
 - [ ] Frontmatter has all required fields (`title`, `date`, `author`, `tags`, `summary`)
+- [ ] Date format uses colon in timezone: `+00:00` not `+0000`
 - [ ] Date matches the directory date (`news/YYYY-MM-DD/`)
+- [ ] If `thumbnail` is in frontmatter, the file exists in the article directory
 - [ ] Article is 200-300 words
 - [ ] At least 1 verifiable source in `sources` frontmatter
 - [ ] All claims are fact-checked against primary sources
