@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "/" });
   eleventyConfig.addPassthroughCopy("news/**/*.{jpg,jpeg,png,gif,webp,svg}");
   eleventyConfig.addPassthroughCopy({ "src/.well-known": ".well-known" });
+  eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
 
   // Ignore non-content markdown at root
   eleventyConfig.ignores.add("README.md");
