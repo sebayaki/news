@@ -1,8 +1,8 @@
 {
   "accountAssociation": {
-    "header": "PLACEHOLDER_SIGN_AT_FARCASTER_DEVELOPER_TOOLS",
-    "payload": "PLACEHOLDER",
-    "signature": "PLACEHOLDER"
+    "header": "eyJmaWQiOjgxNTEsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgyNmVlMkEzNThkMzY4ODNGNGY3MkYzMjZjY0QzZWZlMzczMmEwMmVmIn0",
+    "payload": "eyJkb21haW4iOiJuZXdzLjgwMC53b3JrcyJ9",
+    "signature": "sw6TYxl8dgW5GghOwO5nYk+fIEAqgFM00dLs0Fscsd1TF/Cu+0PdS/ncEjdSx8YbAYso+7fk49qjtg92tBe1yhw="
   },
   "miniapp": {
     "version": "1",
