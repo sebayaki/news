@@ -31,7 +31,3 @@ As Kraken Chief Economist Thomas Perfumo noted: "No central authority concerning
 ## Market Response
 
 Analysts expect limited short-term price impact since the milestone was long anticipated. Bitcoin was trading near $68,000 at the time, with spot ETFs absorbing $1.45 billion in net inflows over the previous five days. The real significance is structural: an asset class with a fixed, verifiable supply cap now has less than 5% of that supply left to issue.
-
----
-
-**Sources:** [Kraken Blog](https://blog.kraken.com/news/industry-news/20-million-bitcoins-mined) · [CryptoTimes](https://www.cryptotimes.io/2026/03/07/bitcoins-20-millionth-coin-set-to-be-mined-this-month/) · [Crypto Economy](https://crypto-economy.com/bitcoin-supply-hits-20m-only-1m-left-to-mine/)

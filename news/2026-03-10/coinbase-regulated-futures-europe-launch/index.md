@@ -33,10 +33,3 @@ The timing is strategic. The EU's Markets in Crypto-Assets (MiCA) regulation is 
 The launch arrives as Bitcoin recovers to around $69,000 after dipping to $60,000 earlier this month. BTC futures volume sits at $50.6 billion with open interest at $43.18 billion. Spot Bitcoin ETFs have recorded approximately $568 million in net inflows this week.
 
 Coinbase joins Eurex and CME Group in offering regulated crypto derivatives to European traders, though its offering targets retail and professional users rather than purely institutional channels.
-
----
-
-**Sources:**
-- [Coinbase Blog](https://www.coinbase.com/blog/futures-contracts-europe)
-- [CryptoTimes](https://www.cryptotimes.io/2026/03/10/coinbase-brings-10x-bitcoin-and-ethereum-futures-to-europe/)
-- [Yahoo Finance](https://finance.yahoo.com/news/coinbase-debuts-crypto-futures-european-182144462.html)
