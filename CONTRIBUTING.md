@@ -48,7 +48,7 @@ sources:
 | `tags` | Yes | Array of lowercase tags |
 | `summary` | Yes | One sentence, used in listing and OG description |
 | `thumbnail` | Yes | Filename of co-located image (e.g., `thumbnail.png`). The file **must exist** in the article directory — missing thumbnails break the homepage layout. |
-| `sources` | No | Array of `{title, url}` for references |
+| `sources` | Yes | Array of `{title, url}` — minimum 1 verifiable source required |
 
 ### Article Body
 
