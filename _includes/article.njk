@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+<main class="article-page">
+  <article class="article-content">
+    <header class="article-header">
+      <div class="article-date-back">
+        <a href="/">&larr; back</a>
+        <time>{{ date | readableDate }}</time>
+      </div>
+      <h1>{{ title }}</h1>
+      <div class="article-meta-full">
+        <span class="meta-author">{{ author }}</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-reading">{{ content | readingTime }} min read</span>
+      </div>
+      <div class="article-tags">
+        {% for tag in tags %}
+          {% if tag != "article" %}
+            <span class="tag">#{{ tag }}</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </header>
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+  </article>
+</main>

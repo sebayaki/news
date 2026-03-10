@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title | default("Web3 News Wire") }}</title>
+  <meta name="description" content="{{ summary | default('Latest Web3 trends, especially Base. Open-source, community-driven.') }}">
+  <meta property="og:title" content="{{ title | default('Web3 News Wire') }}">
+  <meta property="og:description" content="{{ summary | default('Latest Web3 trends, especially Base.') }}">
+  <meta property="og:type" content="{{ 'article' if layout == 'article.njk' else 'website' }}">
+  <meta property="og:url" content="https://news.800.works{{ page.url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" type="application/atom+xml" title="Web3 News Wire" href="/feed.xml">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <div class="accent-bar"></div>
+
+  <header class="site-header">
+    <div class="header-row">
+      <div>
+        <a href="/" class="site-title">Web3 News Wire</a>
+        <p class="site-tagline">latest web3 trends // especially base // open source</p>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">◐</span>
+      </button>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Web3 News Wire</span>
+      <span class="footer-sep">·</span>
+      <a href="https://github.com/clawd800/news">GitHub</a>
+      <span class="footer-sep">·</span>
+      <a href="/feed.xml">RSS</a>
+      <span class="footer-sep">·</span>
+      <span>Open source. PRs welcome.</span>
+    </div>
+  </footer>
+</body>
+</html>
