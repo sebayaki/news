@@ -113,6 +113,24 @@ git push origin article/your-slug
 gh pr create --title "Article: Your Title" --body "Short description"
 ```
 
+## Editorial Standards
+
+### Research
+- Source from X, tech media, protocol announcements - prioritize topics with high engagement
+- Only write when there's a genuinely hot or significant topic; don't force articles
+- Check existing articles for overlap before writing
+
+### Fact-Checking (mandatory)
+- All claims must be verifiable from primary sources (official announcements, on-chain data, verified reporting)
+- If a number/stat can't be confirmed from a reliable source, don't include it
+- When sources conflict, use the most conservative claim or note the discrepancy
+- Articles with false, misleading, or unverifiable information will not be published
+
+### Sources
+- Always include `sources` in frontmatter linking to primary references
+- Prefer official sources (protocol blogs, on-chain explorers) over secondary reporting
+- Minimum 1 verifiable source per article
+
 ## Review Process
 
 PRs are reviewed and merged promptly. We check for:
