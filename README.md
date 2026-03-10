@@ -6,7 +6,7 @@ Open-source Web3 news, especially Base. Updated hourly.
 
 ## What
 
-Short-form Web3 news articles (200-300 words) published as markdown files. The site is built with [Eleventy](https://www.11ty.dev/) and deployed to GitHub Pages.
+Short-form Web3 news articles (200-300 words) published as markdown files with co-located thumbnail images. Built with [Eleventy](https://www.11ty.dev/), deployed to GitHub Pages.
 
 ## How It Works
 
@@ -18,14 +18,15 @@ Short-form Web3 news articles (200-300 words) published as markdown files. The s
 
 ```
 news/
-  2026-03-10/
-    article-slug.md
-    another-article.md
-  2026-03-11/
-    ...
+  article-slug/
+    index.md          # Article (markdown + frontmatter)
+    thumbnail.png     # Thumbnail image (optional)
+  another-article/
+    index.md
+    thumbnail.jpg
 ```
 
-Each article is a markdown file with YAML frontmatter (title, date, author, tags, summary).
+Each article is a markdown file with YAML frontmatter (title, date, author, tags, summary, thumbnail, sources).
 
 ## Contributing
 
@@ -35,7 +36,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and submission instruction
 
 ```bash
 npm install
-npm run dev    # Local dev server at http://localhost:8080
+npm run dev    # Local dev server
 npm run build  # Build to _site/
 ```
 
