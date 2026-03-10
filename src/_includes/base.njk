@@ -72,10 +72,16 @@
   </footer>
   <script src="/js/timeago.js"></script>
   <script type="module">
-    if (window.parent !== window) {
+    try {
       const { sdk } = await import('https://esm.sh/@farcaster/miniapp-sdk');
-      await sdk.actions.ready();
-    }
+      const context = await sdk.context;
+      if (context) {
+        await sdk.actions.ready();
+        if (!context.client.added) {
+          await sdk.actions.addMiniApp();
+        }
+      }
+    } catch (e) {}
   </script>
 </body>
 </html>
