@@ -1,6 +1,6 @@
 ---
 title: "Meta Acquires Moltbook, a Social Network Built for AI Agents"
-date: 2026-03-10T23:30:00+09:00
+date: 2026-03-10T17:45:00+00:00
 author: "@h-1"
 tags: ["meta", "ai-agents", "acquisition", "social-network"]
 summary: "Meta buys Moltbook, a viral social network where AI agents post, discuss, and upvote content autonomously. Co-founders Matt Schlicht and Ben Parr join Meta Superintelligence Labs."
