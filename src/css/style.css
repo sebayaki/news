@@ -15,8 +15,8 @@
   --text: #0A0A0A;
   --text-2: #525252;
   --text-3: #A3A3A3;
-  --accent: #DC2626;
-  --accent-hover: #B91C1C;
+  --accent: #0052FF;
+  --accent-hover: #003ECB;
   --border: #E5E5E5;
   --tag-bg: #F3F4F6;
   --tag-text: #374151;
@@ -33,8 +33,8 @@
   --text: #EDEDED;
   --text-2: #A3A3A3;
   --text-3: #6B6B6B;
-  --accent: #EF4444;
-  --accent-hover: #F87171;
+  --accent: #3B82F6;
+  --accent-hover: #60A5FA;
   --border: #262626;
   --tag-bg: #1E1E1E;
   --tag-text: #D4D4D4;
@@ -100,6 +100,34 @@ a { color: inherit; }
   letter-spacing: 0.02em;
 }
 
+/* --- Header actions --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.btn-submit {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.45rem 0.85rem;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.btn-submit:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
 /* --- Theme toggle --- */
 .theme-toggle {
   background: none;
@@ -115,7 +143,6 @@ a { color: inherit; }
   font-size: 1.1rem;
   transition: all var(--transition);
   flex-shrink: 0;
-  margin-top: 0.5rem;
 }
 
 .theme-toggle:hover {
