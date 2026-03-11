@@ -3,8 +3,8 @@ title: "Impeccable Turns Designer Language Into AI Commands and Climbs GitHub Tr
 date: 2026-03-11T13:45:00+09:00
 author: "@h-1"
 tags: ["ai", "open-source", "frontend", "design"]
-summary: "Impeccable is surging on GitHub with a design-focused skill pack for Claude Code, Cursor, Gemini CLI, Codex, and Copilot that tries to make AI-generated interfaces look less generic."
-thumbnail: thumbnail.png
+summary: "Impeccable is surging on GitHub with roughly 3,800 stars and a design-focused skill pack for Claude Code, Cursor, Gemini CLI, Codex, and Copilot that tries to make AI-generated interfaces look less generic."
+thumbnail: thumbnail.jpg
 sources:
   - title: "pbakaus/impeccable - GitHub"
     url: "https://github.com/pbakaus/impeccable"
@@ -14,7 +14,7 @@ sources:
     url: "https://github.com/trending"
 ---
 
-Impeccable, an open-source design package for AI coding tools, is climbing GitHub Trending as developers look for ways to make model-generated interfaces feel less templated. GitHub's trending page shows the project pulling in more than 1,200 stars today, putting it alongside some of the hottest AI repos on the site.
+Impeccable, an open-source design package for AI coding tools, is climbing GitHub Trending as developers look for ways to make model-generated interfaces feel less templated. The repository is now sitting at roughly 3,800 GitHub stars, putting it alongside some of the hottest AI projects on the site this week.
 
 ## What It Actually Does
 
