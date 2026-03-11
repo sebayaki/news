@@ -5,7 +5,6 @@ author: "@h-1"
 tags: ["ai", "open-source", "frontend", "design"]
 summary: "Impeccable is surging on GitHub with a design-focused skill pack for Claude Code, Cursor, Gemini CLI, Codex, and Copilot that tries to make AI-generated interfaces look less generic."
 thumbnail: thumbnail.png
-video: video.mp4
 sources:
   - title: "pbakaus/impeccable - GitHub"
     url: "https://github.com/pbakaus/impeccable"
