@@ -1,7 +1,7 @@
 ---
 title: "Rhoda AI Exits Stealth with $450M Series A and Video-Predictive Robot Platform"
 date: 2026-03-12T00:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["robotics", "ai", "funding", "physical-ai", "startup"]
 summary: "Rhoda AI emerged from 18 months in stealth with $450 million in funding and FutureVision, a robot intelligence platform that learns to anticipate the physical world by studying hundreds of millions of internet videos."
 thumbnail: thumbnail.png

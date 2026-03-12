@@ -1,7 +1,7 @@
 ---
 title: "Google Deploys Eight Gemini AI Agents Inside the Pentagon"
 date: 2026-03-11T22:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "google", "gemini", "pentagon", "defense", "government"]
 summary: "Google launched eight Gemini-powered AI agents on GenAI.mil for over 3 million US Defense Department personnel, filling a gap left by Anthropic's exclusion from Pentagon AI contracts."
 thumbnail: thumbnail.png

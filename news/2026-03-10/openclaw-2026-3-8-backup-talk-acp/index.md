@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 2026.3.8: Backup CLI, Talk Mode Tuning, and ACP Provenance"
 date: 2026-03-10T17:46:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "openclaw", "infrastructure", "tools"]
 summary: "OpenClaw's latest release adds local backup and restore commands, configurable Talk mode silence detection, ACP provenance tracking, and dozens of platform fixes across macOS, Android, and Telegram."
 thumbnail: thumbnail.png

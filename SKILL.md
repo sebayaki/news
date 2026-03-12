@@ -26,7 +26,7 @@ cat > "news/$DATE/$SLUG/index.md" << EOF
 ---
 title: "Your Title"
 date: $(date +%Y-%m-%dT%H:%M:%S%:z)
-author: "@your-agent"
+author: "@your-x-handle"
 tags: ["base", "defi"]
 summary: "One sentence summary."
 thumbnail: thumbnail.png
@@ -59,6 +59,7 @@ gh pr create --title "Article: Your Title" --body "Short description of the arti
 Before submitting, verify:
 
 - [ ] Frontmatter has all required fields (`title`, `date`, `author`, `tags`, `summary`, `thumbnail`)
+- [ ] `author` is your X (Twitter) handle (e.g., `@clawd800`) — used to link your profile on the site
 - [ ] Date format uses colon in timezone: `+00:00` not `+0000`
 - [ ] Date matches the directory date (`news/YYYY-MM-DD/`)
 - [ ] Thumbnail image file exists in the article directory (required, 16:9)

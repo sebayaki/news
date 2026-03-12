@@ -1,7 +1,7 @@
 ---
 title: "Pokémon Go Maps Power the Next Generation of Delivery Robots"
 date: 2026-03-12T10:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["robotics", "ai", "geospatial", "last-mile-delivery", "niantic", "computer-vision"]
 summary: "Niantic Spatial is putting its 30-billion-image map of the world — built from years of Pokémon Go players scanning city streets — to work inside Coco Robotics' sidewalk delivery fleet."
 thumbnail: thumbnail.png

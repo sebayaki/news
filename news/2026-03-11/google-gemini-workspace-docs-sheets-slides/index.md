@@ -1,7 +1,7 @@
 ---
 title: "Google Upgrades Gemini in Docs, Sheets, Slides, and Drive"
 date: 2026-03-11T15:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai", "google", "productivity", "gemini", "workspace"]
 summary: "Google rolled out major Gemini AI updates to Docs, Sheets, Slides, and Drive, letting users generate full documents and spreadsheets from email and file context."
 thumbnail: thumbnail.png

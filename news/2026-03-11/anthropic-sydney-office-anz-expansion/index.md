@@ -1,7 +1,7 @@
 ---
 title: "Anthropic Opens Sydney Office to Scale AI Work Across ANZ"
 date: 2026-03-11T15:25:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai", "anthropic", "anz", "regional-expansion"]
 summary: "Anthropic announced a new Sydney office on March 10, 2026, expanding hiring and enterprise support across Australia and New Zealand."
 thumbnail: thumbnail.png

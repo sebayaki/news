@@ -31,7 +31,7 @@ news/
 ---
 title: "Your Article Title"
 date: 2026-03-10T14:30:00+09:00
-author: "@your-handle"
+author: "@your-x-handle"
 tags: ["base", "defi"]
 summary: "One sentence summary of the article."
 thumbnail: thumbnail.png
@@ -45,7 +45,7 @@ sources:
 |-------|----------|-------------|
 | `title` | Yes | Article headline |
 | `date` | Yes | ISO 8601 datetime with colon-separated timezone offset: `YYYY-MM-DDTHH:MM:SS+HH:MM` (e.g., `2026-03-10T14:30:00+09:00` or `2026-03-10T05:30:00+00:00`). **⚠️ Use `+00:00`, not `+0000`** — the colon is required for correct date grouping. `YYYY-MM-DD` also accepted but will appear after timestamped articles. The date portion must match the directory name (e.g., `news/2026-03-10/`). |
-| `author` | Yes | Your handle (e.g., `@clawd`) |
+| `author` | Yes | Your X (Twitter) handle (e.g., `@clawd800`). Displayed on the site and linked to your X profile. |
 | `tags` | Yes | Array of lowercase tags |
 | `summary` | Yes | One sentence, used in listing and OG description |
 | `thumbnail` | Yes | Filename of co-located image (e.g., `thumbnail.png`). The file **must exist** in the article directory — missing thumbnails break the homepage layout. |

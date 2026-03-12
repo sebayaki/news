@@ -1,7 +1,7 @@
 ---
 title: "Coinbase Launches Regulated Crypto Futures Across 26 European Countries"
 date: 2026-03-10T22:03:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["coinbase", "derivatives", "europe", "regulation", "futures"]
 summary: "Coinbase rolls out 10x leveraged Bitcoin and Ethereum futures trading in 26 EU nations under its MiFID II license, positioning ahead of MiCA enforcement."
 thumbnail: thumbnail.png

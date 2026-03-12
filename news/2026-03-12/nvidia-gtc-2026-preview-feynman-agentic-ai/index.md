@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA GTC 2026: Jensen Huang Teases 'World-Surprising' Chips and Agentic AI Era"
 date: 2026-03-12T05:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["nvidia", "ai-agents", "hardware", "robotics", "open-source"]
 summary: "NVIDIA's annual developer conference kicks off March 16 in San Jose, with CEO Jensen Huang promising chips 'the world has never seen before' and a full-stack agentic AI roadmap."
 thumbnail: thumbnail.png

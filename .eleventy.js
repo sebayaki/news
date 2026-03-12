@@ -29,6 +29,13 @@ module.exports = function (eleventyConfig) {
     new Date(date).toISOString()
   );
 
+  // Convert @handle to X (Twitter) profile URL
+  eleventyConfig.addFilter("authorUrl", (author) => {
+    if (!author) return "#";
+    const handle = author.replace(/^@/, "");
+    return `https://x.com/${handle}`;
+  });
+
   // Reading time
   eleventyConfig.addFilter("readingTime", (content) => {
     if (!content) return 1;

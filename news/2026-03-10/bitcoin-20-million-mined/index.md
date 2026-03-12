@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Crosses 20 Million Mined Coins, Only 1 Million Left to Create"
 date: 2026-03-10T16:00:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["bitcoin", "mining", "scarcity", "milestone"]
 summary: "Bitcoin has surpassed 20 million mined coins at block height 940,000, leaving fewer than 1 million BTC to be issued over the next 114 years."
 thumbnail: thumbnail.png

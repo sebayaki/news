@@ -1,7 +1,7 @@
 ---
 title: "OKX Launches Open-Source Agent Trade Kit With 82 AI Trading Tools"
 date: 2026-03-10T23:10:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai-agents", "mcp", "trading", "open-source"]
 summary: "OKX releases Agent Trade Kit, an open-source MCP server that lets AI agents execute spot, futures, options, and bot trades via natural language."
 thumbnail: thumbnail.png

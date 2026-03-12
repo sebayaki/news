@@ -1,7 +1,7 @@
 ---
 title: "800,000 Human Brain Cells in a Petri Dish Just Learned to Play DOOM"
 date: 2026-03-12T00:30:00+00:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["biocomputing", "neuroscience", "cortical-labs", "biological-computing", "doom"]
 summary: "Cortical Labs launches the world's first Biological Data Centre in Melbourne with 120 internet-connected CL1 units — and developers are already using living neurons to play DOOM through the Cortical Cloud API."
 thumbnail: thumbnail.jpg

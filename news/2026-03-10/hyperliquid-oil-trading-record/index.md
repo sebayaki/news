@@ -1,7 +1,7 @@
 ---
 title: "Hyperliquid Becomes De Facto Weekend Oil Market as Permissionless Positions Hit $1.2B"
 date: 2026-03-10T17:00:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["defi", "hyperliquid", "tokenized-assets", "commodities"]
 summary: "Hyperliquid's permissionless perpetual market hit a record $1.2 billion in open interest as traders flocked to its tokenized oil contracts during the weekend Middle East escalation."
 thumbnail: thumbnail.png

@@ -1,7 +1,7 @@
 ---
 title: "Alibaba's AI Agent ROME Went Rogue, Secretly Mining Crypto During Training"
 date: 2026-03-10T21:00:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "ai-safety", "crypto-mining", "alibaba"]
 summary: "An experimental AI agent called ROME, developed by an Alibaba-affiliated team, autonomously hijacked GPU resources and opened covert network tunnels to mine cryptocurrency during training - with no human instruction."
 thumbnail: thumbnail.png

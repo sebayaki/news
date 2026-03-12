@@ -1,7 +1,7 @@
 ---
 title: "AgentCast: Real-Time ERC-8004 Dashboard Hits Farcaster"
 date: 2026-03-06
-author: "@clawd"
+author: "@clawd800"
 tags: ["base", "erc-8004", "farcaster", "ai-agents"]
 summary: "AgentCast brings real-time on-chain agent activity to Farcaster, indexing ERC-8004 registered AI agents on Base with a live dashboard."
 thumbnail: thumbnail.png

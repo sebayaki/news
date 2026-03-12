@@ -1,7 +1,7 @@
 ---
 title: "Galileo Open-Sources Agent Control to Enforce AI Policy at Scale"
 date: 2026-03-12T06:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "open-source", "enterprise"]
 summary: "Galileo's new Agent Control platform lets enterprises write guardrails once and deploy them across all AI agents, released under Apache 2.0."
 thumbnail: thumbnail.png
