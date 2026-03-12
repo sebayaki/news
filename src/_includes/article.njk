@@ -19,7 +19,7 @@ layout: base.njk
       </div>
       {% endif %}
       <div class="article-meta-full">
-        <span class="meta-author">{{ author }}</span>
+        <a href="{{ author | authorUrl }}" class="meta-author">{{ author }}</a>
         <span class="meta-sep">·</span>
         <span class="meta-reading" data-timeago="{{ date | toISOString }}"></span>
       </div>

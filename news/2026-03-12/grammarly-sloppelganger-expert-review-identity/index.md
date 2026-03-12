@@ -1,7 +1,7 @@
 ---
 title: "Grammarly Made AI Clones of Real Writers Without Permission — The Internet Just Named Them 'Sloppelgangers'"
 date: 2026-03-12T03:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-ethics", "grammarly", "superhuman", "ai-agents", "identity"]
 summary: "Grammarly's 'Expert Review' feature generates AI feedback using real writers' names without consent, sparking backlash and a new term: sloppelganger."
 thumbnail: thumbnail.png

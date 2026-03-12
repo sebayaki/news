@@ -1,7 +1,7 @@
 ---
 title: "Epic Launches Agent Factory as AI Reaches 85% of Its Hospital Network"
 date: 2026-03-12T01:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "healthcare", "epic-systems", "himss"]
 summary: "At HIMSS 2026, Epic Systems unveiled Agent Factory and the Curiosity foundation model family, while reporting that over 85% of its customers now actively use its AI suite."
 thumbnail: thumbnail.png

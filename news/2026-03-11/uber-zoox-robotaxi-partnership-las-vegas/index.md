@@ -1,7 +1,7 @@
 ---
 title: "Amazon's Zoox Partners With Uber for Multi-Year Robotaxi Deal"
 date: 2026-03-11T23:15:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["robotics", "autonomous-vehicles", "uber", "amazon"]
 summary: "Zoox and Uber announced a multi-year strategic partnership to deploy Zoox's fully electric robotaxis on the Uber platform in Las Vegas this summer — marking Zoox's first deal with a third-party ride-hailing service."
 thumbnail: thumbnail.png

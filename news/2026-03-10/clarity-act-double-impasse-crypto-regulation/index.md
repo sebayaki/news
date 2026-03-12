@@ -1,7 +1,7 @@
 ---
 title: "CLARITY Act Faces Double Impasse as Banks Reject Compromise and Trump Threatens Legislative Blockade"
 date: 2026-03-10T20:00:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["regulation", "clarity-act", "stablecoins", "policy"]
 summary: "The crypto industry's top legislative priority faces twin obstacles: the American Bankers Association rejected a White House compromise, and Trump now threatens to withhold his signature on all bills until his voter-ID legislation passes."
 thumbnail: thumbnail.png

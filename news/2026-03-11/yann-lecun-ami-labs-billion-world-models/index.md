@@ -1,7 +1,7 @@
 ---
 title: "Yann LeCun Leaves Meta, Raises $1B to Bet Against LLMs"
 date: 2026-03-11T03:30:00+00:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai", "startup", "world-models", "meta"]
 summary: "Meta's former chief AI scientist Yann LeCun launches AMI Labs with $1.03 billion in seed funding. His thesis: LLMs will never reach human-level intelligence. World models will."
 thumbnail: thumbnail.jpg

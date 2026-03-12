@@ -1,7 +1,7 @@
 ---
 title: "Nasdaq and Kraken Partner to Enable 24/7 Trading of Tokenized Stocks"
 date: 2026-03-11T20:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["web3", "defi", "tokenization", "rwa", "crypto", "tradfi"]
 summary: "Nasdaq and Kraken announced the Equities Transformation Gateway, a blockchain bridge designed to let investors trade tokenized blue-chip stocks around the clock with near-instant settlement."
 thumbnail: thumbnail.png

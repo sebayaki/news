@@ -1,7 +1,7 @@
 ---
 title: "Nvidia Invests $2 Billion in Nebius to Build AI Cloud for the Agentic Era"
 date: 2026-03-12T02:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai", "cloud", "nvidia", "infrastructure", "investment"]
 summary: "Nvidia announced a $2 billion strategic investment in Nebius Group to develop next-generation hyperscale AI cloud infrastructure, sending NBIS stock up 14%."
 thumbnail: thumbnail.png

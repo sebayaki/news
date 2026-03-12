@@ -1,7 +1,7 @@
 ---
 title: "OpenAI Adds Dynamic Visual Learning for Math and Science in ChatGPT"
 date: 2026-03-12T02:55:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai", "education", "chatgpt", "openai"]
 summary: "OpenAI says ChatGPT now uses dynamic visuals and adaptive explanations for math and science learning across Free, Plus, Pro, and Team plans."
 thumbnail: thumbnail.png

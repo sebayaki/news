@@ -1,7 +1,7 @@
 ---
 title: "Baidu Launches DuClaw, Bringing Zero-Deployment AI Agents to 700 Million Users"
 date: 2026-03-12T04:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai-agents", "baidu", "china", "openclaw", "cloud"]
 summary: "Baidu AI Cloud has launched DuClaw, a hosted OpenClaw service that lets anyone spin up an AI agent in a browser with no deployment experience required, priced at RMB 17.8 (~$2.50) per month for first-time users."
 thumbnail: thumbnail.png

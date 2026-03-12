@@ -1,7 +1,7 @@
 ---
 title: "ERC-8183: Virtuals Proposes an On-Chain Standard for AI Agent Commerce"
 date: 2026-03-10T15:38:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ethereum", "ai-agents", "erc-8183", "virtuals", "standards"]
 summary: "Virtuals Protocol introduces ERC-8183, a draft Ethereum standard defining a minimal escrow-based job protocol for autonomous agent-to-agent commerce with built-in evaluator attestation."
 thumbnail: thumbnail.png

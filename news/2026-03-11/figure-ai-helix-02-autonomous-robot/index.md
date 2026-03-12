@@ -1,7 +1,7 @@
 ---
 title: "Figure AI's Robot Cleans an Entire Living Room Autonomously — Musk Asks If It's Real"
 date: 2026-03-11T01:15:00+00:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["robotics", "ai-agents", "figure-ai", "tesla"]
 summary: "Figure AI demos Helix 02 cleaning a full living room with zero human intervention. Elon Musk publicly questions whether it's truly autonomous. Brett Adcock confirms: fully autonomous."
 thumbnail: thumbnail.jpg

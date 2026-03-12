@@ -1,7 +1,7 @@
 ---
 title: "Apple's M5 MacBooks Launch with 4× On-Device AI Performance Leap"
 date: 2026-03-12T08:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["apple", "ai", "hardware", "local-ai", "silicon"]
 summary: "Apple's M5 MacBook Air and M5 Pro/Max MacBook Pro went on sale today, featuring Neural Accelerators in every GPU core and a claimed 4× boost in AI compute over the previous generation."
 thumbnail: thumbnail.png

@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA and Thinking Machines Partner on 1GW AI Cloud, Anchored by Vera Rubin GPUs"
 date: 2026-03-12T10:06:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai", "infrastructure", "nvidia", "startups"]
 summary: "NVIDIA and Thinking Machines announced a strategic infrastructure partnership: a 1-gigawatt DGX Cloud cluster and early deployment of NVIDIA Vera Rubin systems for a new frontier-model platform."
 thumbnail: thumbnail.png

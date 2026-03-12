@@ -1,7 +1,7 @@
 ---
 title: "Insurance Giant Aon Completes First Stablecoin Premium Payment With Coinbase and Paxos"
 date: 2026-03-10T18:03:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["stablecoins", "ethereum", "solana", "insurance", "institutional-adoption"]
 summary: "Aon settles insurance premiums using USDC on Ethereum and PYUSD on Solana in what it calls the first stablecoin-based premium payment among major global brokers."
 thumbnail: thumbnail.png

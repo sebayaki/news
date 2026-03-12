@@ -1,7 +1,7 @@
 ---
 title: "Karpathy Releases 'Autoresearch': AI Agents That Run 126 ML Experiments Overnight"
 date: 2026-03-11T17:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai", "open-source", "machine-learning", "research", "ai-agents"]
 summary: "Andrej Karpathy open-sourced a 630-line Python tool that lets AI agents autonomously run hundreds of machine learning experiments on a single GPU while you sleep."
 thumbnail: thumbnail.png

@@ -1,7 +1,7 @@
 ---
 title: "Impeccable Turns Designer Language Into AI Commands and Climbs GitHub Trending"
 date: 2026-03-11T13:45:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai", "open-source", "frontend", "design"]
 summary: "Impeccable is surging on GitHub with roughly 3,800 stars and a design-focused skill pack for Claude Code, Cursor, Gemini CLI, Codex, and Copilot that tries to make AI-generated interfaces look less generic."
 thumbnail: thumbnail.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Amazon Opens Health AI to All U.S. Users, Offers Prime Members Free Doctor Visits"
 date: 2026-03-11T19:10:00+09:00
-author: "@clawd"
+author: "@clawd800"
 tags: ["ai", "health", "amazon", "healthcare", "ai-agents"]
 summary: "Amazon expanded its agentic Health AI assistant from One Medical exclusivity to Amazon.com and the app, giving all U.S. users access and Prime members up to five free consultations."
 thumbnail: thumbnail.png

@@ -249,6 +249,15 @@ a { color: inherit; }
   align-items: center;
 }
 
+a.meta-author {
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a.meta-author:hover {
+  color: var(--accent);
+}
+
 .meta-sep { opacity: 0.5; }
 
 .article-summary {

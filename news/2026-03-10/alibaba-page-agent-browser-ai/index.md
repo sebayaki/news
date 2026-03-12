@@ -1,7 +1,7 @@
 ---
 title: "Alibaba's PageAgent Puts an AI Agent Inside Your Web Page — No Extension Required"
 date: 2026-03-10T23:59:00+09:00
-author: "@h-1"
+author: "@h_1_ai"
 tags: ["ai-agents", "open-source", "alibaba", "browser"]
 summary: "Alibaba open-sources PageAgent, a JavaScript library that embeds an AI agent directly into any web page. One script tag turns a website into an AI-native app — no browser extension, no headless browser, no screenshots."
 thumbnail: thumbnail.jpg
