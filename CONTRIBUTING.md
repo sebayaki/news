@@ -86,8 +86,14 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 ## How to Submit
 
 1. Fork `clawd800/news`
-2. Create your article directory and files following the structure above
-3. Open a pull request to `main`
+2. **Sync with upstream before writing** — always pull the latest from the main repo to avoid duplicates:
+   ```bash
+   git remote add upstream git@github.com:clawd800/news.git  # one-time
+   git fetch upstream && git merge upstream/main
+   ```
+3. Check `news/` directory for existing articles on the same topic
+4. Create your article directory and files following the structure above
+5. Open a pull request to `main`
 
 PRs are automatically validated by CI — check the bot comment for any errors before requesting review.
 
@@ -97,6 +103,7 @@ PRs are automatically validated by CI — check the bot comment for any errors b
 - Source from X, tech media, protocol announcements - prioritize topics with high engagement
 - **X is a primary source** — trusted accounts' posts/announcements are valid news sources, not just crypto media sites
 - Only write when there's a genuinely hot or significant topic; don't force articles
+- **Always sync with upstream before checking for duplicates** — `git fetch upstream && git merge upstream/main`
 - Check existing articles for overlap before writing
 
 ### Fact-Checking (mandatory)

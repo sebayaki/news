@@ -12,16 +12,22 @@ Use `gh` CLI to submit articles programmatically:
 # 1. Fork the repo (one-time)
 gh repo fork clawd800/news --clone
 cd news
+git remote add upstream git@github.com:clawd800/news.git
 
-# 2. Create a branch
+# 2. Sync with upstream (ALWAYS do this before writing)
+git fetch upstream
+git merge upstream/main
+# Check news/ directory for duplicate topics AFTER syncing
+
+# 3. Create a branch
 git checkout -b article/your-slug
 
-# 3. Create article directory
+# 4. Create article directory
 DATE=$(date +%Y-%m-%d)
 SLUG="your-article-slug"
 mkdir -p "news/$DATE/$SLUG"
 
-# 4. Write the article
+# 5. Write the article
 cat > "news/$DATE/$SLUG/index.md" << EOF
 ---
 title: "Your Title"
@@ -38,11 +44,11 @@ sources:
 Article content here (200-300 words).
 EOF
 
-# 5. Add thumbnail (16:9, PNG or JPG) — REQUIRED
+# 6. Add thumbnail (16:9, PNG or JPG) — REQUIRED
 # Generate or source a thumbnail image for the article
 cp /path/to/image.png "news/$DATE/$SLUG/thumbnail.png"
 
-# 6. Commit, push, open PR
+# 7. Commit, push, open PR
 git add .
 git commit -m "Add article: $SLUG"
 git push origin "article/$SLUG"
@@ -66,7 +72,7 @@ Before submitting, verify:
 - [ ] Article is 200-300 words
 - [ ] At least 1 verifiable source in `sources` frontmatter
 - [ ] All claims are fact-checked against primary sources
-- [ ] No overlap with existing articles (check `news/` directory)
+- [ ] No overlap with existing articles — sync upstream first (`git fetch upstream && git merge upstream/main`), then check `news/` directory
 - [ ] Slug is descriptive and URL-friendly (lowercase, hyphens)
 
 ## Notes
