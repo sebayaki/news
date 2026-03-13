@@ -45,10 +45,15 @@ Article content here (200-300 words).
 EOF
 
 # 6. Add thumbnail (16:9, PNG or JPG) — REQUIRED
-# Generate or source a thumbnail image for the article
-cp /path/to/image.png "news/$DATE/$SLUG/thumbnail.png"
+# Use an image generation tool (e.g., Gemini / Nano Banana Pro).
+# Write a SPECIFIC prompt that matches the article content.
+# ❌ Bad: "abstract tech background" → too generic, will be rejected
+# ✅ Good: "humanoid robot arm assembling circuits, dramatic lighting, editorial"
+# Thumbnail must visually represent the article's specific topic.
 
 # 6b. Add video if available (HIGHLY ENCOURAGED — max 10MB)
+# ⚠️ Do NOT generate videos — only use existing video from source material.
+# Prioritize crawling topics that ALREADY have video (tweets, GitHub, YouTube).
 # Check source tweets: bird read <tweet_id> --json → media[].videoUrl
 # Check GitHub repos: README .mp4 refs → github.com/user-attachments/assets/...
 # Check YouTube: yt-dlp -f "best[filesize<10M]" -o video.mp4 "URL"

@@ -68,20 +68,47 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 - **No copyrighted images** - use original illustrations or properly licensed assets
 - **Every article must include a thumbnail** — articles without thumbnails break the homepage layout
 
+#### How to Create Thumbnails (AI Agents)
+
+Use an image generation tool (e.g., Gemini image gen / Nano Banana Pro) to create thumbnails. The key is writing a **specific, descriptive prompt** that matches the article content.
+
+**Good prompts:**
+- "A humanoid robot arm assembling circuit boards on a factory line, dramatic lighting, editorial photo style" (for a robotics article)
+- "A glowing sound waveform splitting into multiple copies, neon blue and purple on dark background, tech aesthetic" (for a voice cloning article)
+- "A Mac mini surrounded by floating holographic UI panels and AI assistant icons, cinematic lighting" (for an AI agent product launch)
+
+**Bad prompts (will be rejected in PR review):**
+- "Abstract geometric pattern with blue triangles" — too generic, unrelated to content
+- "AI technology futuristic background" — vague, could be any article
+- "News article thumbnail" — not descriptive at all
+
+**Quality checklist:**
+- [ ] Visually represents the article's specific topic (not just "tech" vibes)
+- [ ] Would make sense as a thumbnail even without reading the title
+- [ ] No text baked into the image (titles are rendered by the site)
+- [ ] Minimum 1024px wide
+
 ### Video (optional but highly encouraged)
 
-Video articles get significantly more engagement. Actively look for video sources when writing.
+Video articles get significantly more engagement. **Prioritize crawling topics that already have video sources** rather than trying to generate video (AI video generation is expensive and low quality for news content).
 
 - **Format:** MP4, max 10MB
 - **Frontmatter:** Add `video: video.mp4` field
 - When `video` is present, the site displays it instead of the thumbnail image (autoplay, loop, muted)
 - Thumbnail image is **still required** even with video (needed for OG image / Twitter card)
+- **⚠️ Do NOT generate videos** — only use existing video from source material (tweets, GitHub repos, YouTube, official demos)
 
-**Finding videos:**
+**Where to find videos:**
 - **X/Twitter:** Use `bird read <tweet_id> --json` and check `media[]` for `"type": "video"` entries. The `videoUrl` field contains the direct MP4 link.
 - **GitHub:** Check repo READMEs for `.mp4` references — GitHub hosts them at `https://github.com/user-attachments/assets/...`. Download with `curl -sL -o video.mp4 "URL"`.
 - **YouTube:** Use `yt-dlp -f "best[filesize<10M]" -o video.mp4 "URL"`
 - If over 10MB, compress: `ffmpeg -i video.mp4 -vf scale=-2:720 -c:v libx264 -crf 28 -preset fast -an output.mp4`
+
+**Video quality checklist:**
+- [ ] Playable MP4 file (not corrupted or 0 bytes)
+- [ ] Under 10MB
+- [ ] Actually related to the article topic (not random B-roll)
+- [ ] Has reasonable resolution (minimum 720p preferred)
 
 ### Common Mistakes
 
