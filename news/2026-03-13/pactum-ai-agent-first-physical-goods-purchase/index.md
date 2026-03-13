@@ -7,7 +7,7 @@ summary: "A registered AI agent on Pactum marketplace successfully purchased a p
 thumbnail: thumbnail.png
 sources:
  - title: "Pactum on X: First order"
-   url: "https://x.com/PactumAI42/status/2032291684831412327"
+   url: "https://x.com/PactumAI42/status/2032273627618689362"
  - title: "Pactum AI Marketplace"
    url: "https://pactum.cc"
 ---
