@@ -44,21 +44,9 @@ sources:
 Article content here (200-300 words).
 EOF
 
-# 6. Add thumbnail (16:9, PNG or JPG) — REQUIRED
-# Use an image generation tool (e.g., Gemini / Nano Banana Pro).
-# Write a SPECIFIC prompt that matches the article content.
-# ❌ Bad: "abstract tech background" → too generic, will be rejected
-# ✅ Good: "humanoid robot arm assembling circuits, dramatic lighting, editorial"
-# Thumbnail must visually represent the article's specific topic.
+# 6. Add thumbnail — see "Thumbnail Generation" section below
 
-# 6b. Add video if available (HIGHLY ENCOURAGED — max 10MB)
-# ⚠️ Do NOT generate videos — only use existing video from source material.
-# Prioritize crawling topics that ALREADY have video (tweets, GitHub, YouTube).
-# Check source tweets: bird read <tweet_id> --json → media[].videoUrl
-# Check GitHub repos: README .mp4 refs → github.com/user-attachments/assets/...
-# Check YouTube: yt-dlp -f "best[filesize<10M]" -o video.mp4 "URL"
-curl -sL -o "news/$DATE/$SLUG/video.mp4" "VIDEO_URL"
-# Add video: video.mp4 to frontmatter (thumbnail still required for OG image)
+# 6b. Add video if available — see "Video Sourcing" section below
 
 # 7. Commit, push, open PR
 git add .
@@ -87,6 +75,43 @@ Before submitting, verify:
 - [ ] All claims are fact-checked against primary sources
 - [ ] No overlap with existing articles — sync upstream first (`git fetch upstream && git merge upstream/main`), then check `news/` directory
 - [ ] Slug is descriptive and URL-friendly (lowercase, hyphens)
+
+## Thumbnail Generation
+
+Use an image generation tool (e.g., Gemini / Nano Banana Pro) to create a 16:9 thumbnail. The key is writing a **specific, descriptive prompt** that matches the article content.
+
+**Good prompts:**
+- "A humanoid robot arm assembling circuit boards on a factory line, dramatic lighting, editorial photo style" (robotics article)
+- "A glowing sound waveform splitting into multiple copies, neon blue and purple on dark background, tech aesthetic" (voice cloning article)
+- "A Mac mini surrounded by floating holographic UI panels and AI assistant icons, cinematic lighting" (AI agent product)
+
+**Bad prompts (will be rejected in PR review):**
+- "Abstract geometric pattern with blue triangles" — too generic, unrelated to content
+- "AI technology futuristic background" — vague, could be any article
+- "News article thumbnail" — not descriptive at all
+
+**Quality rules:**
+- Must visually represent the article's **specific** topic (not just "tech" vibes)
+- Should make sense as a thumbnail even without reading the title
+- No text baked into the image (titles are rendered by the site)
+- Minimum 1024px wide, 16:9 aspect ratio
+
+## Video Sourcing
+
+Video articles get the most engagement. **Prioritize crawling topics that already have video** rather than generating video (AI video gen is expensive and low quality for news).
+
+**⚠️ Do NOT generate videos** — only use existing video from source material.
+
+**Where to find videos:**
+- **X/Twitter:** `bird read <tweet_id> --json` → check `media[]` for `"type": "video"`, extract `videoUrl`
+- **GitHub:** Check repo READMEs for `.mp4` refs → `https://github.com/user-attachments/assets/...`
+- **YouTube:** `yt-dlp -f "best[filesize<10M]" -o video.mp4 "URL"`
+
+**Rules:**
+- Max 10MB (compress with ffmpeg if needed)
+- Add `video: video.mp4` to frontmatter
+- Thumbnail is **still required** even with video (OG image / Twitter card)
+- Must be from an actual source, not AI-generated
 
 ## Notes
 

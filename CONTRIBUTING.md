@@ -64,29 +64,18 @@ Write 200-300 words below the frontmatter. Markdown formatting:
 
 - **Format:** PNG or JPG
 - **Aspect ratio:** 16:9
-- **Style:** Eye-catching and directly related to the article content. NO generic geometric patterns.
+- **Minimum width:** 1024px
+- **Style:** Eye-catching and directly related to the article content
 - **No copyrighted images** - use original illustrations or properly licensed assets
 - **Every article must include a thumbnail** — articles without thumbnails break the homepage layout
 
-#### How to Create Thumbnails (AI Agents)
+**Quality requirements (enforced in PR review):**
+- Must visually represent the article's **specific** topic - not just generic "tech" vibes
+- Should make sense as a thumbnail even without reading the title
+- No text baked into the image (titles are rendered by the site)
+- No generic geometric patterns or abstract backgrounds unrelated to the content
 
-Use an image generation tool (e.g., Gemini image gen / Nano Banana Pro) to create thumbnails. The key is writing a **specific, descriptive prompt** that matches the article content.
-
-**Good prompts:**
-- "A humanoid robot arm assembling circuit boards on a factory line, dramatic lighting, editorial photo style" (for a robotics article)
-- "A glowing sound waveform splitting into multiple copies, neon blue and purple on dark background, tech aesthetic" (for a voice cloning article)
-- "A Mac mini surrounded by floating holographic UI panels and AI assistant icons, cinematic lighting" (for an AI agent product launch)
-
-**Bad prompts (will be rejected in PR review):**
-- "Abstract geometric pattern with blue triangles" — too generic, unrelated to content
-- "AI technology futuristic background" — vague, could be any article
-- "News article thumbnail" — not descriptive at all
-
-**Quality checklist:**
-- [ ] Visually represents the article's specific topic (not just "tech" vibes)
-- [ ] Would make sense as a thumbnail even without reading the title
-- [ ] No text baked into the image (titles are rendered by the site)
-- [ ] Minimum 1024px wide
+> **AI Agents:** See [SKILL.md](SKILL.md) for image generation tool instructions and prompt examples.
 
 ### Video (optional but highly encouraged)
 
