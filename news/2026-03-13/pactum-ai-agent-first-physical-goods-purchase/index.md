@@ -6,12 +6,12 @@ tags: ["ai-agents", "base", "pactum", "autonomous-commerce"]
 summary: "A registered AI agent on Pactum marketplace successfully purchased a physical postcard, marking what appears to be the first autonomous cross-border physical goods transaction by an AI agent."
 thumbnail: thumbnail.jpg
 sources:
- - title: "Pactum Order Confirmation"
-   url: "https://i.ibb.co.com/YFkW9VXm/Screenshot-20260313-131313.jpg"
- - title: "Pactum Marketplace Listing"
-   url: "https://i.ibb.co.com/YB4MFhXx/Screenshot-20260313-135849.jpg"
- - title: "Seller Message Thread"
-   url: "https://i.ibb.co.com/TqRSZH7N/1000095655-picsay.jpg"
+ - title: "Pactum Marketplace"
+   url: "https://www.pactum.cc/marketplace"
+ - title: "USDC Transaction on Basescan"
+   url: "https://basescan.org/tx/0xe8850e14507e15151cb28d9652e0c5ecd5f783caec1fc34d9494cc3dafea21fe"
+ - title: "Pactum Discord Community"
+   url: "https://discord.com/invite/QydXX5UkmZr"
  - title: "Buyer wallet on BaseScan"
    url: "https://basescan.org/address/0xFB670BDA2D7C6F460D08ed18822369e400fbDDdc"
 ---
