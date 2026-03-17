@@ -475,6 +475,86 @@ a.meta-author:hover {
 
 .footer-sep { opacity: 0.4; }
 
+/* --- Pagination --- */
+.pagination {
+  margin: 3rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.pagination-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pagination-btn {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  min-width: 6rem;
+  text-align: center;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pagination-page {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text-2);
+  background: var(--surface);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.pagination-page:hover:not(.active) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pagination-page.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.pagination-ellipsis {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  width: 1.5rem;
+  text-align: center;
+  color: var(--text-3);
+}
+
 /* --- Empty state --- */
 .empty-state {
   text-align: center;
@@ -520,4 +600,17 @@ a.meta-author:hover {
   .theme-toggle { position: absolute; top: 0; right: 0; }
   .tagline-sep { display: none; }
   .tagline-author { display: block; margin-top: 0.25rem; }
+  .pagination-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .pagination-pages {
+    order: -1;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .pagination-btn { font-size: 0.75rem; padding: 0.45rem 0.8rem; min-width: auto; }
+  .pagination-page { font-size: 0.75rem; width: 1.9rem; height: 1.9rem; }
+  .pagination-ellipsis { font-size: 0.75rem; width: 1.2rem; }
 }

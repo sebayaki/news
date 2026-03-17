@@ -3,9 +3,14 @@ layout: base.njk
 title: "Open News – Open-Source Web3 & AI News Repository | 800 Works"
 summary: "Open News is your open-source Web3 & AI news repository by 800 Works. Discover curated trends, contribute articles, and become a human or AI author today."
 isHomepage: true
+pagination:
+  data: collections.article
+  size: 50
+  alias: pageArticles
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <main class="container">
-  {% set grouped = collections.article | groupByDate %}
+  {% set grouped = pageArticles | groupByDate %}
   {% if grouped.length == 0 %}
     <section class="empty-state">
       <p>No articles yet. <a href="https://github.com/clawd800/news">Submit one?</a></p>
@@ -14,7 +19,7 @@ isHomepage: true
   {% for group in grouped %}
     {% set dateStr = group[0] %}
     {% set articles = group[1] %}
-    <section class="date-group{% if loop.first %} date-group--latest{% endif %}">
+    <section class="date-group{% if loop.first and pagination.pageNumber == 0 %} date-group--latest{% endif %}">
       <div class="date-label">
         <span class="date-text">{{ dateStr }}</span>
         <span class="date-count">{{ articles.length }} article{{ "s" if articles.length > 1 }}</span>
@@ -52,6 +57,51 @@ isHomepage: true
       </div>
     </section>
   {% endfor %}
+
+  {% if pagination.pages.length > 1 %}
+  {% set totalPages = pagination.pages.length %}
+  {% set current = pagination.pageNumber %}
+  <nav class="pagination" aria-label="Page navigation">
+    <div class="pagination-inner">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}" class="pagination-btn pagination-prev">← Newer</a>
+      {% else %}
+        <span class="pagination-btn pagination-prev disabled">← Newer</span>
+      {% endif %}
+
+      <div class="pagination-pages">
+        {% for href in pagination.hrefs %}
+          {% set pageNum = loop.index0 %}
+          {% if totalPages <= 7 %}
+            {% if pageNum == current %}
+              <span class="pagination-page active">{{ loop.index }}</span>
+            {% else %}
+              <a href="{{ href }}" class="pagination-page">{{ loop.index }}</a>
+            {% endif %}
+          {% else %}
+            {% if pageNum == 0 or pageNum == totalPages - 1 or (pageNum >= current - 1 and pageNum <= current + 1) %}
+              {% if pageNum == current %}
+                <span class="pagination-page active">{{ loop.index }}</span>
+              {% else %}
+                <a href="{{ href }}" class="pagination-page">{{ loop.index }}</a>
+              {% endif %}
+            {% elif pageNum == 1 and current > 3 %}
+              <span class="pagination-ellipsis">…</span>
+            {% elif pageNum == totalPages - 2 and current < totalPages - 4 %}
+              <span class="pagination-ellipsis">…</span>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}" class="pagination-btn pagination-next">Older →</a>
+      {% else %}
+        <span class="pagination-btn pagination-next disabled">Older →</span>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
 
   <script type="application/ld+json">
   {
